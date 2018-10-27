@@ -14,4 +14,3 @@ public class Main {
         g2.info();
     }
 }
-

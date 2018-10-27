@@ -1,8 +1,21 @@
 package net.theceres.dto;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component("soccer")
 public class Soccer implements Game {
     private boolean ball;
     private int peopleCount;
+    @Autowired
+    @Qualifier("soccer-judge")
+    private Judge judge;
+
+    {
+        ball = true;
+        peopleCount = 11;
+    }
 
     public Soccer() {
     }
@@ -14,6 +27,7 @@ public class Soccer implements Game {
 
     public void info() {
         System.out.println("축구는 " + peopleCount + "명이서 공을" + (ball ? "사용하는 " : "사용하지 않는 ") + "게임입니다.");
+        judge.alert();
     }
 
     public boolean isBall() {
@@ -37,7 +51,7 @@ public class Soccer implements Game {
         return "Soccer{" +
                 "ball=" + ball +
                 ", peopleCount=" + peopleCount +
+                ", judge=" + judge +
                 '}';
     }
 }
-

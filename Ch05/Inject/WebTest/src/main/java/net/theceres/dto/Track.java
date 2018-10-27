@@ -1,8 +1,16 @@
 package net.theceres.dto;
 
+import org.springframework.stereotype.Component;
+
+@Component("track")
 public class Track implements Game {
     private boolean ball;
     private int peopleCount;
+
+    {
+        ball = false;
+        peopleCount = 1;
+    }
 
     public Track() {
     }
@@ -40,4 +48,3 @@ public class Track implements Game {
                 '}';
     }
 }
-

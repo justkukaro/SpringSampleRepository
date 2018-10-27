@@ -1,19 +1,31 @@
 package net.theceres.dto;
 
-public class Track implements Game {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("soccer")
+public class Soccer implements Game {
     private boolean ball;
     private int peopleCount;
+    @Autowired
+    private Judge judge;
 
-    public Track() {
+    {
+        ball = true;
+        peopleCount = 11;
     }
 
-    public Track(boolean ball, int peopleCount) {
+    public Soccer() {
+    }
+
+    public Soccer(boolean ball, int peopleCount) {
         this.ball = ball;
         this.peopleCount = peopleCount;
     }
 
     public void info() {
-        System.out.println("육상은 " + peopleCount + "명이서 공을" + (ball ? "사용하는" : "사용하지 않는 ") + "게임입니다.");
+        System.out.println("축구는 " + peopleCount + "명이서 공을" + (ball ? "사용하는 " : "사용하지 않는 ") + "게임입니다.");
+        judge.alert();
     }
 
     public boolean isBall() {
@@ -34,10 +46,10 @@ public class Track implements Game {
 
     @Override
     public String toString() {
-        return "Track{" +
+        return "Soccer{" +
                 "ball=" + ball +
                 ", peopleCount=" + peopleCount +
+                ", judge=" + judge +
                 '}';
     }
 }
-
