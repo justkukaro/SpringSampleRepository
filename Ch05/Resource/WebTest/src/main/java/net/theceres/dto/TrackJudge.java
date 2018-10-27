@@ -8,3 +8,4 @@ public class TrackJudge implements Judge {
         System.out.println("부정 출발 ㄴㄴ");
     }
 }
+

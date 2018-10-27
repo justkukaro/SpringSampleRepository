@@ -8,3 +8,4 @@ public class SoccerJudge implements Judge {
         System.out.println("카드 잘줌");
     }
 }
+
