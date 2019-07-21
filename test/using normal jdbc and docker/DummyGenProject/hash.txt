@@ -1,0 +1,5 @@
+0efabc831d0d546c7ae3e6b9aea96bad  ./DummyGen/target/DummyGen-1.0-SNAPSHOT.jar
+c389f5482963ef760eb0b0f91ae4a8d8  ./DummyGen/target/DummyGen-1.0-SNAPSHOT.war
+230050d7af2db2fba47a15d8e9192678  ./DummyGen/target/DummyGen-1.0-SNAPSHOT.war
+69bfb037b73631c1c9fda74543a26b0a  ./DummyGen/target/DummyGen-1.0-SNAPSHOT.war
+d610f4bdceb3337a4d5bf8be3c9029a8  ./DummyGen/target/DummyGen-1.0-SNAPSHOT.war
